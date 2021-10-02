@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #e5e5e5;
   display: flex;
   padding-top: 5rem;
@@ -49,6 +49,8 @@ body {
 .placeholder {
   width: 150px;
   height: 66px;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
 .start {
@@ -63,41 +65,46 @@ body {
   background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
 }
 
-
-
 .hold {
-	position: relative;
-	background-clip: padding-box;
-	border: solid 5px transparent;
-	border-radius: 20px;
+  position: relative;
+  background-clip: padding-box;
+  border: solid 5px transparent;
+  border-radius: 20px;
 }
 
 .hold:before {
-   content: "";
-   position: absolute;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   left: 0;
-   z-index: -1;
-   margin: -5px;
-   border-radius: inherit;
-   background: conic-gradient(
-      #fd004c,
-      #fe9000,
-      #fff020,
-      #3edf4b,
-      #3363ff,
-      #b102b7,
-      #fd004c
-   );
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -60px;
+  border-radius: inherit;
+  background: conic-gradient(
+    #fd004c,
+    #fe9000,
+    #fff020,
+    #3edf4b,
+    #3363ff,
+    #b102b7,
+    #fd004c
+  );
+  animation: rotate 2s linear infinite;
 }
 
 .hide {
-   display: none;
+  display: none;
 }
 
 .hoverd {
-   border-top: 2px solid;
-   border-image: linear-gradient( turquoise, greenyellow) 1 0;
+  border-top: 2px solid;
+  border-image: linear-gradient(turquoise, greenyellow) 1 0;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
